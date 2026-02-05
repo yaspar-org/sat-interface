@@ -1,11 +1,6 @@
-## My Project
+# sat-interface
 
-TODO: Fill this README out!
-
-Be sure to:
-
-* Change the title in this README
-* Edit your repository description on GitHub
+This crate provides an abstraction interface for SAT solvers. 
 
 ## Security
 

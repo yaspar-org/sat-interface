@@ -1,0 +1,12 @@
+[package]
+name = "sat-interface"
+edition = "2024"
+version = "0.1.0"
+readme = "README.md"
+
+[features]
+default = []
+cadical = ["dep:cadical-sys"]
+
+[dependencies]
+cadical-sys = { version = "0.6.0", optional = true }
