@@ -1,3 +1,6 @@
+// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: Apache-2.0
+
 //! This crate provides an abstraction layer to describe all SAT solvers. It provides a common
 //! interface for different implementations of SAT solvers.
 //!

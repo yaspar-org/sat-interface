@@ -1,3 +1,6 @@
+// Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+// SPDX-License-Identifier: Apache-2.0
+
 //! This module union multiple solvers as one solver by using these solvers in a round-robin manner.
 
 use crate::{AddConstraints, Model, SatSolver};
