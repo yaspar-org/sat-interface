@@ -61,17 +61,17 @@ pub trait SatSolver: AddConstraints<Clause> + AddConstraints<Formula> {
 }
 
 /// A clause; it's a list of disjoined literals
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub struct Clause(pub Vec<i32>);
 
 /// A formula; it's a list of conjoined clauses
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub struct Formula(pub Vec<Clause>);
 
 /// A model as a vector mapping literals to boolea values
 ///
 /// Note that the indices are off by one as SAT variables start at 1.
-#[derive(Debug, Clone, Eq, PartialEq)]
+#[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub struct Model(pub Vec<bool>);
 
 impl Display for Clause {
@@ -171,6 +171,12 @@ impl Clause {
     /// Concatenate a given clause by modifying the self clause
     pub fn concat_mut(&mut self, clause: &Clause) -> &mut Self {
         self.0.extend(&clause.0);
+        self
+    }
+
+    /// Add a new literal to the clause
+    pub fn add(&mut self, lit: i32) -> &mut Self {
+        self.0.push(lit);
         self
     }
 }
