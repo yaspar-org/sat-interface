@@ -158,6 +158,13 @@ pub trait ExternalPropagator {
     fn cb_add_external_clause_lit(&mut self) -> i32;
 }
 
+/// Connected terminators are checked for termination regularly.  If the
+/// '`terminated`' function of the terminator returns true the solver is
+/// terminated synchronously as soon it calls this function.
+pub trait Terminator {
+    fn terminated(&mut self) -> bool;
+}
+
 /// A clause; it's a list of disjoined literals
 #[derive(Debug, Clone, Eq, PartialEq, Hash)]
 pub struct Clause(pub Vec<i32>);
