@@ -3,7 +3,8 @@ name = "sat-interface"
 edition = "2024"
 version = "0.1.1"
 readme = "README.md"
-license = "Apache-2.0"
+# MiniSat sources from the `deps/minisat` submodule are under the MIT License
+license = "Apache-2.0 AND MIT"
 description = "This crate provides an abstraction interface for SAT solvers."
 authors = ["the Amazon Trusted Solver team"]
 keywords = ["SAT", "solver", "logic"]
@@ -14,9 +15,14 @@ repository = "https://github.com/yaspar-org/sat-interface"
 [features]
 default = []
 cadical = ["dep:cadical-sys"]
+minisat = ["dep:cxx", "dep:cxx-build"]
 
 [dependencies]
 cadical-sys = { version = "0.7.0", optional = true }
+cxx = { version = "1.0.202", optional = true }
+
+[build-dependencies]
+cxx-build = { version = "1.0.202", optional = true }
 
 [lib]
 name = "sat_interface"

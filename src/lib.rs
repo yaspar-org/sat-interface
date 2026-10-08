@@ -8,6 +8,8 @@
 
 #[cfg(feature = "cadical")]
 pub mod cadical;
+#[cfg(feature = "minisat")]
+pub mod minisat;
 pub mod multisolver;
 
 use std::collections::HashSet;
