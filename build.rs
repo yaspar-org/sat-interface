@@ -30,6 +30,7 @@ fn build_minisat() {
         .define("__STDC_FORMAT_MACROS", None)
         .define("NDEBUG", None)
         .flag_if_supported("-Wno-literal-suffix")
+        .flag_if_supported("-Wno-reserved-user-defined-literal")
         .flag_if_supported("-Wno-unused-parameter")
         .flag_if_supported("-Wno-unused-but-set-variable")
         .flag_if_supported("-Wno-unused-variable")
