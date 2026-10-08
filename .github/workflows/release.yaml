@@ -11,6 +11,8 @@ jobs:
       id-token: write     # Required for OIDC token exchange
     steps:
       - uses: actions/checkout@v6
+        with:
+          submodules: recursive
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
       - uses: rust-lang/crates-io-auth-action@v1

@@ -50,6 +50,7 @@ jobs:
         features:
           - ''
           - 'cadical'
+          - 'minisat'
     runs-on: ${{ matrix.os }}
     permissions:
       contents: read
