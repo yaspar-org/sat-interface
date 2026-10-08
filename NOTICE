@@ -1,1 +1,11 @@
 Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+This project includes a fork of MiniSat (https://github.com/amarshah1/minisat),
+which is compiled when the `minisat` feature is enabled. The fork is based on the
+MiniSatUP work (https://github.com/hchenqide/minisat), which added an IPASIR-UP
+interface to MiniSat. MiniSat is licensed under the MIT License; see
+deps/minisat/LICENSE.
+
+MiniSat -- Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+           Copyright (c) 2007-2010  Niklas Sorensson
+           Copyright (c) 2025 Chenqi Hao
