@@ -15,7 +15,7 @@ do
     error=1
     echo "$f does not have a copyright banner!"
   fi
-done <   <(find "$folder" -name '*.rs' -print0)
+done <   <(find "$folder" \( -name '*.rs' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' -o -name '*.hpp' \) -print0)
 
 if [[ $error == 1 ]]; then
   echo "A copyright banner must be attached in the first two lines in every source code file!"
