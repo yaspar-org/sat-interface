@@ -1,7 +1,7 @@
 [package]
 name = "sat-interface"
 edition = "2024"
-version = "0.1.1"
+version = "0.1.2"
 readme = "README.md"
 # MiniSat sources from the `deps/minisat` submodule are under the MIT License
 license = "Apache-2.0 AND MIT"
