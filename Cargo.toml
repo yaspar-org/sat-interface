@@ -9,6 +9,12 @@ description = "This crate provides an abstraction interface for SAT solvers."
 authors = ["the Amazon Trusted Solver team"]
 keywords = ["SAT", "solver", "logic"]
 categories = ["algorithms", "science"]
+exclude = [
+    "deps/minisat/cnfuzz.c",
+    "deps/minisat/drup-trim.c",
+    "deps/minisat/run_fuzz.sh",
+    "deps/minisat/test",
+]
 homepage = "https://github.com/yaspar-org/sat-interface"
 repository = "https://github.com/yaspar-org/sat-interface"
 
